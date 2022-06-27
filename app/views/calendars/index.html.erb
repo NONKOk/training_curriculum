@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 191278fbedbb738bdd5efcf9c1ea41a2ce951ab5
   <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
     <%= f.label :日付を選択, class: 'lavel' %>
     <%= f.date_field :date, class: 'date-select' %>
@@ -6,7 +9,12 @@
     <%= f.text_field :plan, class: 'text-input' %>
     <%= f.submit '保存' %>
   <% end %>
+<<<<<<< HEAD
   
+=======
+
+<div>
+>>>>>>> 191278fbedbb738bdd5efcf9c1ea41a2ce951ab5
   <div class='calendar'>
     <% @week_days.each do |day| %>
       <div class='item'>
@@ -20,6 +28,25 @@
           <% end %>
         <% end %>
         </ul>
+
+<div class='calendar'>
+  <% @week_days.each do |day| %>
+    <div class='item'>
+      <div class='date'>
+        <% day[:month] %>/<% day[:date] %>
       </div>
+<<<<<<< HEAD
     <% end %>
   </div>
+=======
+      <ul class='content'>
+      <% if day[:plans].length != 0 %>
+        <% day[:plans].each do |plan| %>
+          <li class='plan-list'>・<%= plan %></li>
+        <% end %>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+>>>>>>> 191278fbedbb738bdd5efcf9c1ea41a2ce951ab5
